@@ -9,6 +9,10 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 public interface StudentRepository extends JpaRepository<Student,Integer> {
+    @Query("select s from Student s")
+    List<Student>getAll();
+
+
 
 
 }

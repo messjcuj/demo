@@ -19,12 +19,12 @@ public interface StudentRepository extends JpaRepository<Student,Integer> {
 
     @Transactional
     @Modifying
-    @Query(value = "update Student s set s.name = ?2, s.score =?3 where s.id = ?1",nativeQuery = true)
+    @Query(value = "update Student s set s.name = ?2, s.score =?3 where s.id = ?1")
     void updateStudent(Integer id, String name, Double score);
 
     @Transactional
     @Modifying
-    @Query(value ="delete from Student s where s.id = ?1",nativeQuery = true)
+    @Query(value ="delete from Student s where s.id = ?1")
     void deleteStudent(Integer id);
 
 
